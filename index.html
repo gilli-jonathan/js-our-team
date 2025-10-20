@@ -26,56 +26,59 @@
 
             </div>
 
+
+            <form id="form" action="">
+                <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
+                    aria-labelledby="staticBackdropLabel">
+
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="staticBackdropLabel">Nuovo Membro del Team</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <div class="mb-4">
+                            <label for="" class="form-label">Nome e cognome</label>
+                            <input type="text" class="form-control" name="" id="new_name" aria-describedby="helpId"
+                                placeholder="Inserire il nome" required />
+
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="" class="form-label">Incarico aziendale</label>
+                            <input type="text" class="form-control" name="" id="new_role" aria-describedby="helpId"
+                                placeholder="designer, netturbino, sguattero..." required />
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="" class="form-label">Indirizzo Email</label>
+                            <input type="text" class="form-control" name="" id="new_mail" aria-describedby="helpId"
+                                placeholder="budino@gelato.cibo" required />
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="" class="form-label">Aggiungi una foto</label>
+                            <input type="text" class="form-control" name="" id="new_img" aria-describedby="helpId"
+                                value="img/spongi.jpg" required />
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button type="submit" name="" id="bnt_new_member" class="btn btn-primary">
+                                <i class="bi bi-plus-circle"></i> Benvenuto nel team ;)
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </form>
+
             <div class="my-5 w-50 ">
                 <button class="btn btn-primary mb-3 w-100" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
                     <i class="bi bi-person-plus-fill"></i>
                     Aggiungi un membro del team
                 </button>
-            </div>
-
-            <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop"
-                aria-labelledby="staticBackdropLabel">
-
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="staticBackdropLabel">Nuovo Membro del Team</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-
-                <div class="offcanvas-body">
-                    <div class="mb-4">
-                        <label for="" class="form-label">Nome e cognome</label>
-                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                            placeholder="Inserire il nome" />
-
-                    </div>
-
-                    <div class="mb-4">
-                        <label for="" class="form-label">Incarico aziendale</label>
-                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                            placeholder="designer, netturbino, sguattero..." />
-                    </div>
-
-                    <div class="mb-4">
-                        <label for="" class="form-label">Indirizzo Email</label>
-                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                            placeholder="budino@gelato.cibo" />
-                    </div>
-
-                    <div class="mb-4">
-                        <label for="" class="form-label">Aggiungi una foto</label>
-                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                            value="./assets/img/sabmo.jpg" />
-                    </div>
-
-                    <div class="d-grid gap-2">
-                        <button type="button" name="" id="" class="btn btn-primary">
-                            <i class="bi bi-plus-circle"></i> Benvenuto nel team ;)
-                        </button>
-                    </div>
-
-
-                </div>
             </div>
 
         </div>

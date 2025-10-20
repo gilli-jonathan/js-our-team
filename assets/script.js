@@ -43,6 +43,8 @@ let daddyEl = document.getElementById("card-daddy");
 let card_code = "";
 
 function card_create(array) {
+  card_code = "";
+
   for (let i = 0; i < array.length; i++) {
     const thisMember = array[i];
     //il mio ciclo for scorre nell'array in modo funzionale
@@ -67,8 +69,44 @@ function card_create(array) {
                     </div>
                 </div>`;
   }
-  return card_code;
+  daddyEl.innerHTML = card_code;
 }
 
 card_create(teamMembers);
-daddyEl.innerHTML = card_code;
+
+const formEl = document.getElementById("form");
+
+const nameEl = document.getElementById("new_name");
+const emailEl = document.getElementById("new_mail");
+const roleEl = document.getElementById("new_role");
+const imgEl = document.getElementById("new_img");
+
+formEl.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const name = nameEl.value;
+  const email = emailEl.value;
+  const role = roleEl.value;
+  const img = imgEl.value;
+
+  const new_member = {
+    name,
+    role,
+    email,
+    img,
+  };
+
+  teamMembers.push(new_member);
+
+  card_create(teamMembers);
+
+  nameEl.value = "";
+  emailEl.value = "";
+  roleEl.value = "";
+
+  const offcanvasElement = document.getElementById("staticBackdrop");
+  const offcanvas =
+    bootstrap.Offcanvas.getInstance(offcanvasElement) ||
+    new bootstrap.Offcanvas(offcanvasElement);
+  offcanvas.hide();
+});
