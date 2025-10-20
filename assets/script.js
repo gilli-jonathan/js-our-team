@@ -43,6 +43,8 @@ let daddyEl = document.getElementById("card-daddy");
 
 for (let i = 0; i < teamMembers.length; i++) {
   const thisMember = teamMembers[i];
-  console.log(thisMember);
   //il mio ciclo for scorre nell'array in modo funzionale
+
+  const { name, role, email, img } = thisMember;
+  console.log(name, role, email, img);
 }
