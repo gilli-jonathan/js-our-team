@@ -42,16 +42,16 @@ const teamMembers = [
 let daddyEl = document.getElementById("card-daddy");
 let card_code = "";
 
-for (let i = 0; i < teamMembers.length; i++) {
-  const thisMember = teamMembers[i];
-  //il mio ciclo for scorre nell'array in modo funzionale
+function card_create(array) {
+  for (let i = 0; i < array.length; i++) {
+    const thisMember = array[i];
+    //il mio ciclo for scorre nell'array in modo funzionale
 
-  //ho creato il posto in cui verranno messe le info della carda
+    //ho creato il posto in cui verranno messe le info della carda
 
-  const { name, role, email, img } = thisMember;
-  console.log(name, role, email, img);
+    const { name, role, email, img } = thisMember;
 
-  card_code += `
+    card_code += `
                 <div class="col">
                     <div class="card h-100 text-white bg-dark">
                         <div class="row g-0">
@@ -66,6 +66,9 @@ for (let i = 0; i < teamMembers.length; i++) {
                         </div>
                     </div>
                 </div>`;
+  }
+  return card_code;
 }
 
+card_create(teamMembers);
 daddyEl.innerHTML = card_code;
