@@ -40,11 +40,32 @@ const teamMembers = [
 //porto il card-daddy qua su Js
 
 let daddyEl = document.getElementById("card-daddy");
+let card_code = "";
 
 for (let i = 0; i < teamMembers.length; i++) {
   const thisMember = teamMembers[i];
   //il mio ciclo for scorre nell'array in modo funzionale
 
+  //ho creato il posto in cui verranno messe le info della carda
+
   const { name, role, email, img } = thisMember;
   console.log(name, role, email, img);
+
+  card_code += `
+                <div class="col">
+                    <div class="card h-100 text-white bg-dark">
+                        <div class="row g-0">
+                            <div class="col-4">
+                                <img src="./assets/${img}" class="img-fluid h-100 object-fit-cover" alt="">
+                            </div>
+                            <div class="col-8 d-flex flex-column justify-content-center p-3">
+                                <h5 class="fw-bold mb-1">${name}</h5>
+                                <p class="mb-1">${role}</p>
+                                <a href="" class="text-info small">${email}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
 }
+
+daddyEl.innerHTML = card_code;
